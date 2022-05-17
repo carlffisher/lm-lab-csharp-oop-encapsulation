@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Encapsulation.Models;
 
+
+
 const string MY_ACCOUNT_NUMBER = "ABCDEFG123";
 
 //DODGY BANK ACCOUNT
@@ -56,3 +58,22 @@ Console.WriteLine("Oh no :( It looks like we can't do this - it's too secure!");
 //mySecureBankAccount._accountBalance = 1000000;
 mySecureBankAccount.DisplayAccountBalanceDetails();
 Console.WriteLine("😹 Well I guess that's secure!");
+
+//WEATHER REPORTER
+
+Console.WriteLine("\n--- WEATHER REPORTER ---\n");
+WeatherReporter myWeatherReport1 = new("London", 7);
+Console.WriteLine("{0}", myWeatherReport1.GetFormattedStringForConsolePrint());
+WeatherReporter myWeatherReport2 = new("California", 25);
+Console.WriteLine("{0}", myWeatherReport2.GetFormattedStringForConsolePrint());
+WeatherReporter myWeatherReport3 = new("Cape Town", 35);
+Console.WriteLine("{0}", myWeatherReport3.GetFormattedStringForConsolePrint());
+
+WeatherReporter myWeatherReport4 = new("", 25);
+Console.WriteLine("{0}", myWeatherReport4.GetFormattedStringForConsolePrint());
+WeatherReporter myWeatherReport5 = new(" ", 35);
+Console.WriteLine("{0}", myWeatherReport5.GetFormattedStringForConsolePrint());
+WeatherReporter myWeatherReport6 = new("Cape Town", 250);
+Console.WriteLine("{0}", myWeatherReport6.GetFormattedStringForConsolePrint());
+WeatherReporter myWeatherReport7 = new("Cape Town", -250);
+Console.WriteLine("{0}", myWeatherReport7.GetFormattedStringForConsolePrint());
